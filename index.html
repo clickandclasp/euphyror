@@ -8,89 +8,93 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap');
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            /* Updated to Pink Gradient */
-            background: 
-                radial-gradient(circle at top, rgba(255, 182, 193, 0.15), transparent 30%),
-                linear-gradient(180deg, #3d1a24, #2a151b, #1a0d10);
-            color: white;
+            /* Elegant Salmon Pink Gradient */
+            background: linear-gradient(135deg, #2d1b1e, #4a2c30);
+            color: #fffaf9;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 25px 14px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
         .container {
             width: 100%;
-            max-width: 440px;
+            max-width: 400px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 28px;
-            padding: 40px 24px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.06);
-            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 182, 193, 0.2);
+            border-radius: 30px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
-        /* Circular Profile Logo Styling */
         .profile-pic {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
-            border: 3px solid rgba(255, 182, 193, 0.5);
+            border: 4px solid #fa8072; /* Salmon border */
+            box-shadow: 0 0 15px rgba(250, 128, 114, 0.3);
         }
 
         .username {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
-            letter-spacing: 2px;
-            margin-bottom: 35px;
-            color: #ffb6c1;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #ffa07a; /* Light Salmon */
+            letter-spacing: 1.5px;
         }
 
         .links-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
         }
 
         .link-item {
             display: flex;
             align-items: center;
-            width: 100%;
-            padding: 16px 20px;
-            border-radius: 14px;
-            box-sizing: border-box;
+            padding: 16px 22px;
+            border-radius: 50px; /* More rounded/girly aesthetic */
             background: rgba(255, 255, 255, 0.05);
-            color: white;
-            font-size: 14px;
+            color: #fffaf9;
             text-decoration: none;
-            transition: 0.25s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .link-item:hover {
-            border: 1px solid #ffb6c1;
-            background: rgba(255, 182, 193, 0.15);
-            transform: translateY(-2px);
+            background: #fa8072;
+            color: white;
+            transform: scale(1.02);
+            border-color: #ffb5a7;
         }
 
-        .link-item i { width: 25px; font-size: 16px; }
+        .link-item i { width: 25px; font-size: 18px; }
 
         .footer {
-            margin-top: 40px;
-            font-size: 11px;
-            opacity: 0.5;
+            margin-top: 35px;
+            font-size: 10px;
+            letter-spacing: 1px;
+            opacity: 0.6;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 480px) {
+            .container { padding: 30px 20px; }
+            .username { font-size: 24px; }
         }
     </style>
 </head>
@@ -98,6 +102,7 @@
 
 <div class="container">
 
+    <!-- Remember to replace 'your-image-url.jpg' with your actual image path -->
     <img src="your-image-url.jpg" alt="Profile" class="profile-pic">
     <div class="username">euphyror</div>
 
