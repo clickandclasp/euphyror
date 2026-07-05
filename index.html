@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>euphyror | Socials</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            /* Updated to Pink Gradient */
+            background: 
+                radial-gradient(circle at top, rgba(255, 182, 193, 0.15), transparent 30%),
+                linear-gradient(180deg, #3d1a24, #2a151b, #1a0d10);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 25px 14px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 40px 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.06);
+            box-sizing: border-box;
+        }
+
+        /* Circular Profile Logo Styling */
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid rgba(255, 182, 193, 0.5);
+        }
+
+        .username {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin-bottom: 35px;
+            color: #ffb6c1;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 14px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.25s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .link-item:hover {
+            border: 1px solid #ffb6c1;
+            background: rgba(255, 182, 193, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .link-item i { width: 25px; font-size: 16px; }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 11px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <img src="your-image-url.jpg" alt="Profile" class="profile-pic">
+    <div class="username">euphyror</div>
+
+    <div class="links-wrapper">
+        <a href="https://www.instagram.com/euphyror/" target="_blank" class="link-item">
+            <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/Gwyn15" target="_blank" class="link-item">
+            <i class="fa-brands fa-facebook-f"></i> <span>Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@euphyror" target="_blank" class="link-item">
+            <i class="fa-brands fa-tiktok"></i> <span>TikTok</span>
+        </a>
+        <a href="https://open.spotify.com/user/31fgassy6xjrifzsxgk4dpolkdtu?si=c2ecf4998c184637" target="_blank" class="link-item">
+            <i class="fa-brands fa-spotify"></i> <span>Spotify</span>
+        </a>
+        <a href="https://www.roblox.com/users/3728185580/profile" target="_blank" class="link-item">
+            <i class="fa-solid fa-gamepad"></i> <span>Roblox</span>
+        </a>
+    </div>
+
+    <div class="footer">© 2026 euphyror.</div>
+
+</div>
+
+</body>
+</html>
