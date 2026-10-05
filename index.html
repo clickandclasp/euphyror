@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>euphyror | Socials</title>
 
-        <link rel="icon" type="image/png" href="logo.png?v=1">
-    
+    <link rel="icon" type="image/png" href="logo.png?v=1">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap');
 
+        :root {
+            /* Palette pulled from the background gradient (#ea9999 -> #660000) */
+            --rose:        #ea9999;  /* gradient start */
+            --blush:       #f4cccc;  /* light accent */
+            --cream:       #fff1f1;  /* pill background */
+            --wine:        #660000;  /* gradient end */
+            --wine-soft:   #8e2a33;  /* hover / icons */
+            --wine-text:   #7a1f27;  /* pill text */
+        }
+
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            /* Light Blush Pink Gradient */
             background: linear-gradient(135deg, #ea9999, #660000);
-            color: #5d4a4d;
+            color: var(--blush);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,12 +39,14 @@
             width: 100%;
             max-width: 400px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(224, 102, 102, 0.3);
+            /* Dark wine glass so light text stays readable on the gradient */
+            background: rgba(70, 8, 14, 0.38);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(244, 204, 204, 0.35);
             border-radius: 30px;
             padding: 40px 30px;
-            box-shadow: 0 10px 30px rgba(224, 102, 102, 0.2);
+            box-shadow: 0 14px 40px rgba(40, 0, 4, 0.45);
         }
 
         .profile-pic {
@@ -44,15 +55,17 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            border: 3px solid #ffccd5;
+            border: 3px solid var(--blush);
+            box-shadow: 0 0 0 4px rgba(244, 204, 204, 0.18);
         }
 
         .username {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 600;
             margin-bottom: 5px;
-            color: #f4cccc;
+            color: #fff1f1;
+            text-shadow: 0 2px 10px rgba(40, 0, 4, 0.4);
         }
 
         .subtitle {
@@ -60,7 +73,8 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 30px;
-            opacity: 0.7;
+            color: var(--blush);
+            opacity: 0.85;
         }
 
         .links-wrapper {
@@ -74,28 +88,42 @@
             align-items: center;
             padding: 15px 20px;
             border-radius: 50px;
-            background: #ffffff;
-            color: #d68c96;
+            background: var(--cream);
+            color: var(--wine-text);
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
             transition: all 0.3s ease;
-            border: 1px solid #ffe4e6;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 12px rgba(40, 0, 4, 0.22);
         }
 
-        .link-item:hover {
-            background: #ea9999;
-            color: white;
+        .link-item i {
+            width: 30px;
+            font-size: 16px;
+            color: var(--wine-soft);
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover,
+        .link-item:focus-visible {
+            background: var(--wine-soft);
+            color: #fff1f1;
             transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(40, 0, 4, 0.4);
+            outline: none;
         }
 
-        .link-item i { width: 30px; font-size: 16px; }
+        .link-item:hover i,
+        .link-item:focus-visible i {
+            color: var(--blush);
+        }
 
         .footer {
             margin-top: 35px;
             font-size: 10px;
-            opacity: 0.4;
+            color: var(--blush);
+            opacity: 0.65;
         }
 
         @media (max-width: 480px) {
@@ -107,9 +135,8 @@
 
 <div class="container">
 
-    <!-- Remember to replace 'your-image-url.jpg' with your photo link -->
     <img src="photo.png" alt="Profile" class="profile-pic">
-    
+
     <div class="username">euphyror</div>
     <div class="subtitle">Socials & Contacts</div>
 
