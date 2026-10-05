@@ -31,6 +31,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            min-height: 100dvh;
             padding: 20px;
             box-sizing: border-box;
         }
@@ -69,7 +70,7 @@
         }
 
         .subtitle {
-            font-size: 12px;
+            font-size: 13px;
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 30px;
@@ -105,29 +106,45 @@
             transition: color 0.3s ease;
         }
 
-        .link-item:hover,
         .link-item:focus-visible {
             background: var(--wine-soft);
             color: #fff1f1;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(40, 0, 4, 0.4);
-            outline: none;
+            outline: 2px solid var(--blush);
+            outline-offset: 2px;
         }
 
-        .link-item:hover i,
-        .link-item:focus-visible i {
-            color: var(--blush);
+        .link-item:focus-visible i { color: var(--blush); }
+
+        .link-item:active {
+            background: var(--wine-soft);
+            color: #fff1f1;
+            transform: scale(0.98);
+        }
+
+        .link-item:active i { color: var(--blush); }
+
+        @media (hover: hover) {
+            .link-item:hover {
+                background: var(--wine-soft);
+                color: #fff1f1;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 18px rgba(40, 0, 4, 0.4);
+            }
+            .link-item:hover i { color: var(--blush); }
         }
 
         .footer {
             margin-top: 35px;
-            font-size: 10px;
+            font-size: 12px;
             color: var(--blush);
             opacity: 0.65;
         }
 
+        .link-item { -webkit-tap-highlight-color: transparent; }
+
         @media (max-width: 480px) {
             .container { padding: 30px 20px; }
+            .link-item { padding: 16px 20px; font-size: 15px; }
         }
     </style>
 </head>
@@ -141,19 +158,19 @@
     <div class="subtitle">Socials & Contacts</div>
 
     <div class="links-wrapper">
-        <a href="https://www.instagram.com/euphyror/" target="_blank" class="link-item">
+        <a href="https://www.instagram.com/euphyror/" target="_blank" rel="noopener noreferrer" class="link-item">
             <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
         </a>
-        <a href="https://www.facebook.com/Gwyn15" target="_blank" class="link-item">
+        <a href="https://www.facebook.com/Gwyn15" target="_blank" rel="noopener noreferrer" class="link-item">
             <i class="fa-brands fa-facebook-f"></i> <span>Facebook</span>
         </a>
-        <a href="https://www.tiktok.com/@euphyror" target="_blank" class="link-item">
+        <a href="https://www.tiktok.com/@euphyror" target="_blank" rel="noopener noreferrer" class="link-item">
             <i class="fa-brands fa-tiktok"></i> <span>TikTok</span>
         </a>
-        <a href="https://open.spotify.com/user/31fgassy6xjrifzsxgk4dpolkdtu?si=c2ecf4998c184637" target="_blank" class="link-item">
+        <a href="https://open.spotify.com/user/31fgassy6xjrifzsxgk4dpolkdtu?si=c2ecf4998c184637" target="_blank" rel="noopener noreferrer" class="link-item">
             <i class="fa-brands fa-spotify"></i> <span>Spotify</span>
         </a>
-        <a href="https://www.roblox.com/users/3728185580/profile" target="_blank" class="link-item">
+        <a href="https://www.roblox.com/users/3728185580/profile" target="_blank" rel="noopener noreferrer" class="link-item">
             <i class="fa-solid fa-gamepad"></i> <span>Roblox</span>
         </a>
     </div>
